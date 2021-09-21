@@ -11,12 +11,12 @@ namespace Tamagochi
        public Player() { }
         public Player(string name) {
             Name = name;
-            weapon = new Weapon("Booom!")
+            Weapon = new Weapon("Club")
             {
                 Damage = 30
             };
 
-            food = new Food("Corn")
+            Food = new Food("Corn")
             {
                 Health = 30
             };
@@ -29,7 +29,7 @@ namespace Tamagochi
         {
             if (tamagochi.Health < tamagochi.IntinialHealth)
             {
-                tamagochi.Health += food.Health;
+                tamagochi.Health += Food.Health;
                 if (tamagochi.Health > tamagochi.IntinialHealth)
                 {
                     tamagochi.Health = tamagochi.IntinialHealth;
@@ -44,7 +44,7 @@ namespace Tamagochi
 
         public void DamageTamagochi(Tamagochi tamagochi)
         {
-            tamagochi.Health -= weapon.Damage;
+            tamagochi.Health -= Weapon.Damage;
             tamagochi.Happy--;
 
         }
@@ -54,7 +54,15 @@ namespace Tamagochi
             tamagochi.Happy++;
         }
 
-        private readonly Weapon weapon;
-        private readonly Food food;
+        public void AttackMage(Mage mage)
+        {
+            if (!mage.Lenses)
+            {
+                mage.Health = 0;
+            }
+        }
+
+    public Weapon Weapon { get; set; }
+    public Food Food { get; set; }
     }
 }

@@ -10,18 +10,20 @@ namespace Tamagochi
     {
         public Owl() : base()
         {
-            weapon = new Weapon("Claws");
-            weapon.Damage = 50;
+            Weapon = new ("Claws");
+            Weapon.Damage = 50;
             IntinialHealth = 120;
             Health = 120;
+            Kind = "Owl";
         }
         public Owl(string name) : base(name)
         {
             Name = name;
-            weapon = new Weapon("Claws");
-            weapon.Damage = 50;
+            Weapon = new ("Claws");
+            Weapon.Damage = 50;
             IntinialHealth = 120;
             Health = 120;
+            Kind = "Owl";
         }
 
         public override void AngryTalk()

@@ -9,28 +9,28 @@ namespace Tamagochi
     class Raccoon : Tamagochi
     {
         public Raccoon() : base() {
-            weapon = new Weapon("Pistol");
-            weapon.Damage = 10;
+            Weapon = new ("Pistol");
+            Weapon.Damage = 10;
             IntinialHealth = 150;
             Health = 150;
+            Kind = "Raccoon"; 
         }
         public Raccoon(string name) : base(name)
         {
             Name = name;
-            weapon = new Weapon("Pistol");
-            weapon.Damage = 10;
+            Weapon = new ("Pistol");
+            Weapon.Damage = 10;
             IntinialHealth = 150;
             Health = 150;
         }
 
         public override void AngryTalk()
         {
-            Console.WriteLine("RRRRRRRRRRRRR");
+            Console.WriteLine("PF!PF!PF!PF!PF!");
         }
         public override void Talk()
         {
             Console.WriteLine("Rrrrr...");
         }
-        private Weapon weapon;
 }
 }

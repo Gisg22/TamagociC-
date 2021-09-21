@@ -10,10 +10,10 @@ namespace Tamagochi
     {
         public void MenuConsole();
         public void Play();
-        public void CreateTamagochi(ref Tamagochi tamagochi, ref Player player);
+        public void CreateTamagochi(ref Tamagochi tamagochi);
 
-        public void Process(ref Tamagochi tamagochi, ref Player player);
+        public void Process(ref Tamagochi tamagochi);
 
-
+        public void FightWithMage(Tamagochi tamagochi);
     }
 }
